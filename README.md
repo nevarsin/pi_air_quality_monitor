@@ -16,6 +16,9 @@ make run
 ## Architecture
 This project uses python, flask, docker-compose and redis to create a simple web server to display the latest historical values from the sensor.
 
+## Prometheus metrics
+a /metrics endpoint is available to allow for Prometheus scraping pm25, pm10 and aqi current values
+
 ## Example Data
 Some example data you can get from the sensor includes the following:
 
