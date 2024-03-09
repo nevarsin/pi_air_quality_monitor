@@ -7,9 +7,9 @@ import redis
 import aqi
 from sds011lib import SDS011QueryReader
 
-redis_client = redis.StrictRedis(host=os.environ.get('REDIS_HOST'), port=6379, db=0)
-
-
+if (os.environ.get('REDIS_ENABLED')=="true"):
+    redis_client = redis.StrictRedis(host=os.environ.get('REDIS_HOST'), port=6379, db=0)
+    
 class AirQualityMonitor():
 
     def __init__(self):
